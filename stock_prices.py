@@ -93,11 +93,11 @@ def print_monthly_averages(monthly_averages_list):
     ''' Takes a list of tuples and prints out 2 columns'''
 
     # Print out the header for the information
-    print("{:<10s}{:>7s}" .format("Month","Price"))
+    print("{:<10s} {:>7s}" .format("Month","Price"))
 
     # Print the average for each month
     for month_tuple in monthly_averages_list:
-        print("{:<10s}{:>7.2f}" .format(month_tuple[0],month_tuple[1]))
+        print("{:<10s} {:>7.2f}" .format(month_tuple[0],month_tuple[1]))
 
     return
 
@@ -112,7 +112,7 @@ def main():
         data_list = get_data_list(file_stream)
 
         monthly_averages = get_monthly_averages(data_list)
-
+        
         print_monthly_averages(monthly_averages)
 
         highest_day = get_highest_day(data_list)
